@@ -37,8 +37,10 @@ namespace DesafioProjetoHospedagem.Models
         public int ObterQuantidadeHospedes()
         {
             // TODO: Retorna a quantidade de hóspedes (propriedade Hospedes)
-            // *IMPLEMENTE AQUI*
-            return 0;
+            //R:    Utiliza o operador null-conditional (?.) para verificar se Hospedes não é nulo antes de acessar Count, 
+            //      e o operador de coalescência nula (??) para retornar 0 caso Hospedes seja nulo, prevenindo 
+            //      NullReferenceException.
+            return Hospedes?.Count?? 0;
         }
 
         public decimal CalcularValorDiaria()
